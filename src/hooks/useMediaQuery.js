@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 
 const isQueryMatching = (query) => window.matchMedia(query).matches;
@@ -13,7 +12,7 @@ const useMediaQuery = (query) => {
   useEffect(() => {
     window.addEventListener('resize', setQueryMatch);
     return () => window.removeEventListener('resize', setQueryMatch);
-  }, [matches, query, setQueryMatch]);
+  }, [matches, query]);
 
   return matches;
 };

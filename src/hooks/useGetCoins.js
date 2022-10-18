@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-
 import { collection, onSnapshot, query } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 
@@ -61,7 +59,7 @@ const useGetCoins = () => {
 
   useEffect(() => {
     handleGetAllCoins(REQUEST_OPTIONS, yourCoins);
-  }, [handleGetAllCoins, yourCoins]);
+  }, [yourCoins]);
 
   return { coins };
 };

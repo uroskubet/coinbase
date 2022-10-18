@@ -14,7 +14,7 @@ const SignUp = () => {
 
   useEffect(() => {
     if (user) navigate('/assets');
-  }, [navigate, user]);
+  }, [user]);
 
   onAuthStateChanged(auth, (currentUser) => setUser(currentUser));
 

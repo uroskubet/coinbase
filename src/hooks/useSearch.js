@@ -19,7 +19,7 @@ const useSearch = (allItems) => {
 
   useEffect(() => {
     if (!searchInput) setSearchResult(allItems);
-  }, [allItems, searchInput]);
+  }, [allItems]);
 
   return { searchResult, searchInput, handleSearch };
 };
